@@ -1,11 +1,10 @@
-# Lab 02 Exercise 1: Fuel Cost Calculator
+# Lab 02 Exercise 1: Road Trip Budgeter
 # Write your code below:
 
-def calculate_fuel_cost(distance, km_per_liter, price_per_liter):
+def is_budget_sufficient(one_way_km, km_per_liter, price_per_liter, budget):
     # TODO: Implement this function
+    # Calculate round trip cost and checks if within budget
     pass
 
 # Test your code here
-print("Testing Fuel Cost Calculator...")
-# result = calculate_fuel_cost(...)
-# print(result)
+print("Testing Road Trip Budgeter...")
