@@ -20,4 +20,13 @@ def check_collision(x1, y1, w1, h1, x2, y2, w2, h2):
     If none of these are true, they must be overlapping!
     """
     # TODO: Implement collision detection logic
-    pass
+    if (x1 < x2 + w2) and (x2 < x1 + w1) and (y1 < y2 + h2) and (y2 < y1 + h1):
+        return True
+    else:
+        return False
+ 
+
+    
+print (check_collision (0, 0, 4, 2, 0, 0, 8 ,4 ))
+    
+

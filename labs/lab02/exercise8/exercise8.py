@@ -4,12 +4,16 @@
 def calculate_bounce_height(current_height):
     """Calculate next bounce height (80% of current)."""
     # TODO: Implement this function
-    pass
+    height = 0.8 * current_height
+    return height
 
 def is_ball_stopped(height):
     """Return True if height < 1, False otherwise."""
     # TODO: Implement this function
-    pass
+    if height > 1:
+        return True 
+    else: 
+        return False
 
 def simulate_bouncing_ball(start_height):
     """
@@ -17,7 +21,20 @@ def simulate_bouncing_ball(start_height):
     Returns: (bounce_count, total_distance)
     """
     # TODO: Implement using calculate_bounce_height and is_ball_stopped
-    pass
+    current_height = start_height
+    height = calculate_bounce_height(current_height)
+    bounce_count = 0 
+    total_distance = start_height
+    
+    while is_ball_stopped(calculate_bounce_height(current_height)):
+        height = calculate_bounce_height(current_height)
+        total_distance += height *2
+        bounce_count += 1
+
+    return (bounce_count, total_distance)
+
+    
+
 
 # Test your code here
 print("Testing Bouncing Ball Simulation...")
