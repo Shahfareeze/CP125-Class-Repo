@@ -79,3 +79,5 @@ print(numbers)  # [10, 20, 30]
 
 numbers[0] = 120132103761094 # Change the second element
 print(numbers)  # [10, 25, 30]
+
+print (numbers [1+1])
