@@ -5,12 +5,12 @@ def analyze_performance(lap_times):
 
     for i in range (0,(len(lap_times))):
         if len(lap_times)%2 == 0:
-            if i+1 <= len(lap_times) //2:
+            if i+1 <= len(lap_times) // 2:
                 first_laps.append(lap_times[i])
             else :
                 second_laps.append(lap_times[i])
         else:
-            if i+1 <= len(lap_times)//2:
+            if i+1 <= (len(lap_times)//2) + 1:
                 first_laps.append(lap_times[i])
             else :
                 second_laps.append(lap_times[i])
@@ -26,6 +26,6 @@ def analyze_performance(lap_times):
 
 
 # Test
-laps = [60, 62, 61, 63, 65, 68, 70, 72]
+laps = [60, 62, 61, 63, 65, 68, 70, 72, 60, ]
 result = analyze_performance(laps)
 print(f"Faded: {result}")  # Expected: True

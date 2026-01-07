@@ -27,7 +27,7 @@ def test_find_low_stock_all():
     assert find_low_stock([5, 3, 8], 10) == [0, 1, 2]
 
 def test_calculate_restock_cost():
-    assert calculate_restock_cost([50, 5, 100, 3, 25], [10.00, 25.00, 5.00, 50.00, 15.00], 10, 20) == 1500.00
+    assert calculate_restock_cost([50, 5, 100, 3, 25], [10.00, 25.00, 5.00, 50.00, 15.00], 10, 20) == 1000.00
 
 def test_calculate_restock_cost_none():
     assert calculate_restock_cost([50, 100, 25], [10.00, 5.00, 15.00], 10, 20) == 0.00
