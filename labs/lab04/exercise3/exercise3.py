@@ -22,7 +22,7 @@ def find_low_stock(quantities, threshold):
     low_items = []
     for i in range(len(quantities)):
         if quantities[i] < threshold:
-            low_items.append(quantities[i])
+            low_items.append(i)
     return low_items
 
 
