@@ -10,4 +10,17 @@ def manage_roster(enrolled, drop_requests, waitlist):
     Returns:
         int: Count of final enrolled students
     """
+
+    after_drop = set()
+    for students in enrolled:
+        if students not in drop_requests:
+            after_drop.add(students)
+
+    if len(after_drop) < 5:
+        while len(after_drop) < 7 and len(waitlist) > 0:
+           after_drop.add(waitlist.pop())
+
+    return len(after_drop)
+
+    
     pass
