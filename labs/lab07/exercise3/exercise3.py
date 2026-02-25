@@ -1,6 +1,28 @@
 def compare_prices(store_a, store_b):
     # TODO: Your code here
-    pass
+
+    products = {
+        "only_a": [],
+        "a_cheaper": [],
+        "b_cheaper": []
+    }
+
+    for product in store_a:
+        if product not in store_b:
+            products["only_a"].append(product)
+            continue
+
+        if store_a[product] < store_b[product]:
+            products["a_cheaper"].append(product)
+        elif store_a[product] > store_b[product]:
+            products["b_cheaper"].append(product)
+
+
+    products["only_a"] = sorted(products["only_a"])
+    products["a_cheaper"] = sorted(products["a_cheaper"])
+    products["b_cheaper"] = sorted(products["b_cheaper"])
+
+    return products
 
 
 
