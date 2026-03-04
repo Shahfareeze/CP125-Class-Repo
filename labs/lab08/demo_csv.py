@@ -3,7 +3,7 @@ import csv
 
 # Read CSV file
 print("=== Reading CSV ===")
-f = open("data/students.csv", "r", newline="")
+f = open("labs/lab08/data/students.csv", "r", newline="")
 reader = csv.reader(f)
 
 for row in reader:
